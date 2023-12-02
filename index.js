@@ -11,11 +11,11 @@ try {
     console.log('Running Azure Cost Estimator.')
     let command = './azure-cost-estimator';
 
-    if(core.getInput('resource-group-name')) {
+    if(core.getInput('resource-group-name') && core.getInput('resource-group-name')) {
         command += ' ' + core.getInput('template-file') + ' ' + core.getInput('subscription-id') + ' ' + core.getInput('resource-group-name');
     }
 
-    if(core.getInput('subscription-id')) {
+    if(core.getInput('subscription-id') && core.getInput('resource-group-name') == null) {
         command += ' sub ' + core.getInput('template-file') + ' ' + core.getInput('subscription-id') + ' ' + core.getInput('location');
     }
 
