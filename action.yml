@@ -23,67 +23,67 @@ inputs:
     description: 'Deployment mode'
     required: false
   threshold:
-    description: 'Deployment mode'
+    description: 'Cost threshold'
     required: false
   parameters-file:
-    description: 'Deployment mode'
+    description: 'Path to a parameters file'
     required: false
   currency:
-    description: 'Deployment mode'
+    description: 'Selected currency'
     required: false
   generate-json-output:
-    description: 'Deployment mode'
+    description: 'Should generate JSON output'
     required: false
   silent:
-    description: 'Deployment mode'
+    description: 'Should run in silent mode'
     required: false
   stdout:
-    description: 'Deployment mode'
+    description: 'Should print output to stdout'
     required: false
   disable-detailed-metrics:
-    description: 'Deployment mode'
+    description: 'Should disable detailed metrics'
     required: false
   json-output-filename:
-    description: 'Deployment mode'
+    description: 'Name of the JSON output file'
     required: false
   generate-html-output:
-    description: 'Deployment mode'
+    description: 'Should generate HTML output'
     required: false
   inline-parameters:
-    description: 'Deployment mode'
+    description: 'List of inline parameters'
     required: false
   dry-run:
-    description: 'Deployment mode'
+    description: 'Should run in dry run mode'
     required: false
   output-format:
-    description: 'Deployment mode'
+    description: 'Which output format to use'
     required: false
   disable-cache:
-    description: 'Deployment mode'
+    description: 'Should disable cache'
     required: false
   terraform-executable-path:
-    description: 'Deployment mode'
+    description: 'Path to Terraform executable'
     required: false
   conversion-rate:
-    description: 'Deployment mode'
+    description: 'Selected conversion rate'
     required: false
   cache-handler:
-    description: 'Deployment mode'
+    description: 'Selected cache handler'
     required: false
   cache-storage-account-name:
-    description: 'Deployment mode'
+    description: 'Selected cache storage account name'
     required: false
   webhook-url:
-    description: 'Deployment mode'
+    description: 'URL of the webhook to call'
     required: false
   webhook-authorization:
-    description: 'Deployment mode'
+    description: 'Value of the authorization header to use when calling the webhook'
     required: false
   configuration-file:
-    description: 'Deployment mode'
+    description: 'Path to a configuration file'
     required: false
   disable-version-check:
-    description: 'Deployment mode'
+    description: 'Should disable version check'
     required: false
 runs:
   using: 'node20'
