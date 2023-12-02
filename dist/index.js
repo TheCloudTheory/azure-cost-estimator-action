@@ -30836,7 +30836,7 @@ try {
         throw new Error('Please provide a valid input.');
     }
 
-    const result = execSync(command.toString());
+    const result = execSync(command).toString();
     console.log(result);
 } catch (error) {
     core.setFailed(error.message);
