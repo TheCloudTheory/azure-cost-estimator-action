@@ -14,7 +14,7 @@ try {
     if(core.getInput('resource-group-name') && core.getInput('subscription-id')) {
         command += ' ' + core.getInput('template-file') + ' ' + core.getInput('subscription-id') + ' ' + core.getInput('resource-group-name');
     }
-    else if(core.getInput('subscription-id') && core.getInput('resource-group-name') == null) {
+    else if(core.getInput('subscription-id') && core.getInput('resource-group-name') == null && core.getInput('location')) {
         command += ' sub ' + core.getInput('template-file') + ' ' + core.getInput('subscription-id') + ' ' + core.getInput('location');
     }
     else if(core.getInput('management-group-id')) {

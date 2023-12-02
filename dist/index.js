@@ -30820,20 +30820,20 @@ try {
     console.log('Running Azure Cost Estimator.')
     let command = './azure-cost-estimator';
 
-    if(core.getInput('resource-group-name')) {
+    if(core.getInput('resource-group-name') && core.getInput('subscription-id')) {
         command += ' ' + core.getInput('template-file') + ' ' + core.getInput('subscription-id') + ' ' + core.getInput('resource-group-name');
     }
-
-    if(core.getInput('subscription-id')) {
+    else if(core.getInput('subscription-id') && core.getInput('resource-group-name') == null && core.getInput('location')) {
         command += ' sub ' + core.getInput('template-file') + ' ' + core.getInput('subscription-id') + ' ' + core.getInput('location');
     }
-
-    if(core.getInput('management-group-id')) {
+    else if(core.getInput('management-group-id')) {
         command += ' mg ' + core.getInput('template-file') + ' ' + core.getInput('management-group-id');
     }
-
-    if(core.getInput('tenant-id')) {
+    else if(core.getInput('tenant-id')) {
         command += ' tenant ' + core.getInput('tenant-id') + ' ' + core.getInput('template-file');
+    }
+    else {
+        throw new Error('Please provide a valid input.');
     }
 
     execSync(command);
