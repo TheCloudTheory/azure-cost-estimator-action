@@ -99,8 +99,8 @@ try {
         command += ' --webhook-authorization ' + core.getInput('webhook-authorization');
     }
 
-    if(core.getInput('inline')) {
-        const parameters = core.getInput('inline');
+    if(core.getInput('inline-parameters')) {
+        const parameters = core.getInput('inline-parameters');
         for (const [key, value] of Object.entries(parameters)) {
             command += ' --inline ' + key + '=' + value;
         }
