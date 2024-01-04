@@ -79,12 +79,6 @@ inputs:
   webhook-authorization:
     description: 'Value of the authorization header to use when calling the webhook'
     required: false
-  configuration-file:
-    description: 'Path to a configuration file'
-    required: false
-  disable-version-check:
-    description: 'Should disable version check'
-    required: false
 runs:
   using: 'node20'
   main: 'dist/index.js'
