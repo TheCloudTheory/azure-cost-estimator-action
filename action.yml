@@ -1,4 +1,4 @@
-name: 'Azure Cost Estimator'
+name: 'Azure Cost Estimator GitHub Action'
 description: 'Runs cost estimation of Azure resources using Azure Cost Estimator tool'
 inputs:
   template-file:
