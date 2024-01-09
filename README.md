@@ -27,14 +27,14 @@ jobs:
         uses: TheCloudTheory/azure-cost-estimator-action@0.0.11-preview
         with:
           template-file: 'ace-tests/templates/acr.json'
-          subscription-id: 'cf70b558-b930-45e4-9048-ebcefb926adf'
-          resource-group-name: 'arm-estimator-tests-rg'
+          subscription-id: '<subscription-id>'
+          resource-group-name: '<resource-group-name>'
       - name: Run action for Bicep
         uses: TheCloudTheory/azure-cost-estimator-action@0.0.11-preview
         with:
           template-file: 'ace-tests/templates/bicep/acr.bicep'
-          subscription-id: 'cf70b558-b930-45e4-9048-ebcefb926adf'
-          resource-group-name: 'arm-estimator-tests-rg'
+          subscription-id: '<subscription-id>'
+          resource-group-name: '<resource-group-name>'
 ```
 
 ### Remarks
