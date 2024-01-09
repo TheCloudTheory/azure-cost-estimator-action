@@ -4,7 +4,7 @@ const execSync = require('child_process').execSync;
 
 try {
     console.log('Downloading Azure Cost Estimator.')
-    execSync('wget https://github.com/TheCloudTheory/arm-estimator/releases/download/1.3/linux-x64.zip');
+    execSync('wget https://github.com/TheCloudTheory/arm-estimator/releases/download/1.4-beta1/linux-x64.zip');
     execSync('unzip -o linux-x64.zip');
     execSync('chmod +x ./azure-cost-estimator');
 
