@@ -100,7 +100,7 @@ try {
     }
 
     if(core.getInput('inline-parameters')) {
-        const parameters = core.getInput('inline-parameters');
+        const parameters = JSON.parse(core.getInput('inline-parameters'));
         for (const [key, value] of Object.entries(parameters)) {
             command += ' --inline ' + key + '=' + value;
         }
