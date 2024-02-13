@@ -36,8 +36,8 @@ jobs:
           subscription-id: '<subscription-id>'
           resource-group-name: '<resource-group-name>'
        - name: Run action for Bicep (parameters)
-        uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
-        with:
+         uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
+         with:
           template-file: 'ace-tests/templates/reworked/key-vault/usage-patterns-1.bicep'
           subscription-id: 'cf70b558-b930-45e4-9048-ebcefb926adf'
           resource-group-name: 'arm-estimator-tests-rg'
