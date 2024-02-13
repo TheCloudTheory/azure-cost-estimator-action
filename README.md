@@ -7,7 +7,10 @@ This GitHub Actions currently supports `1.4` release of ACE.
 ## Usage
 ACE GitHub Action allows you to use the same set of options, which are available for the supported version of ACE. You can find the whole reference in the `action.yml` file in this repository.
 
-### Example
+### How to use
+Below is a set of examples presenting how to use this GitHub Action with different parameters and options.
+
+### Basic (ARM Template)
 ```
 name: Test GitHub action
 
@@ -29,19 +32,55 @@ jobs:
           template-file: 'ace-tests/templates/acr.json'
           subscription-id: '<subscription-id>'
           resource-group-name: '<resource-group-name>'
+```
+
+### Basic (Bicep)
+```
+name: Test GitHub action
+
+on: [workflow_dispatch]
+
+jobs:
+  test_github_action:
+    runs-on: ubuntu-latest
+    name: A job to test GitHub Action
+    steps:
+      - uses: actions/checkout@v3
+      - name: Azure Login
+        uses: Azure/login@v1.4.6
+        with:
+          creds: ${{ secrets.SP_CREDS }}
       - name: Run action for Bicep
         uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
         with:
-          template-file: 'ace-tests/templates/bicep/acr.bicep'
+          template-file: 'ace-tests/templates/bicep.json'
           subscription-id: '<subscription-id>'
           resource-group-name: '<resource-group-name>'
-       - name: Run action for Bicep (parameters)
-         uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
-         with:
-          template-file: 'ace-tests/templates/reworked/key-vault/usage-patterns-1.bicep'
-          subscription-id: 'cf70b558-b930-45e4-9048-ebcefb926adf'
-          resource-group-name: 'arm-estimator-tests-rg'
-          inline-parameters: '{"parLocation":"northeurope"}'
+```
+
+### Pass inline parameters
+```
+name: Test GitHub action
+
+on: [workflow_dispatch]
+
+jobs:
+  test_github_action:
+    runs-on: ubuntu-latest
+    name: A job to test GitHub Action
+    steps:
+      - uses: actions/checkout@v3
+      - name: Azure Login
+        uses: Azure/login@v1.4.6
+        with:
+          creds: ${{ secrets.SP_CREDS }}
+      - name: Run action for inline parameters
+        uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
+        with:
+          template-file: 'ace-tests/templates/acr.json'
+          subscription-id: '<subscription-id>'
+          resource-group-name: '<resource-group-name>'
+          inline-parameters: '{"par1":"value1","par2":"value2"}'
 ```
 
 ### Remarks
