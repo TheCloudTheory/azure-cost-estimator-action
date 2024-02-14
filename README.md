@@ -2,7 +2,7 @@
 [Azure Cost Estimator (ACE)](https://github.com/TheCloudTheory/arm-estimator) GitHub Action for easy integration with your GitHub Action pipelines. 
 
 ## Supported ACE version
-This GitHub Actions currently supports `1.4` release of ACE.
+This GitHub Actions currently supports `1.5-beta1` release of ACE.
 
 ## Usage
 ACE GitHub Action allows you to use the same set of options, which are available for the supported version of ACE. You can find the whole reference in the `action.yml` file in this repository.
@@ -27,7 +27,7 @@ jobs:
         with:
           creds: ${{ secrets.SP_CREDS }}
       - name: Run action for ARM Template
-        uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
+        uses: TheCloudTheory/azure-cost-estimator-action@0.0.15-preview
         with:
           template-file: 'ace-tests/templates/acr.json'
           subscription-id: '<subscription-id>'
@@ -51,7 +51,7 @@ jobs:
         with:
           creds: ${{ secrets.SP_CREDS }}
       - name: Run action for Bicep
-        uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
+        uses: TheCloudTheory/azure-cost-estimator-action@0.0.15-preview
         with:
           template-file: 'ace-tests/templates/bicep.json'
           subscription-id: '<subscription-id>'
@@ -75,7 +75,7 @@ jobs:
         with:
           creds: ${{ secrets.SP_CREDS }}
       - name: Run action for inline parameters
-        uses: TheCloudTheory/azure-cost-estimator-action@0.0.14-preview
+        uses: TheCloudTheory/azure-cost-estimator-action@0.0.15-preview
         with:
           template-file: 'ace-tests/templates/acr.json'
           subscription-id: '<subscription-id>'
