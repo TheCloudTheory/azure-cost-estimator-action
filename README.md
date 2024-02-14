@@ -2,7 +2,7 @@
 [Azure Cost Estimator (ACE)](https://github.com/TheCloudTheory/arm-estimator) GitHub Action for easy integration with your GitHub Action pipelines. 
 
 ## Supported ACE version
-This GitHub Actions currently supports `1.5-beta1` release of ACE.
+This GitHub Actions currently supports `1.5-beta1` release of ACE. Use tags to point to older versions.
 
 ## Supported runners
 Currently this action support Linux runners only.
