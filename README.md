@@ -4,6 +4,9 @@
 ## Supported ACE version
 This GitHub Actions currently supports `1.5-beta1` release of ACE.
 
+## Supported runners
+Currently this action support Linux runners only.
+
 ## Usage
 ACE GitHub Action allows you to use the same set of options, which are available for the supported version of ACE. You can find the whole reference in the `action.yml` file in this repository.
 
