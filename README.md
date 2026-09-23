@@ -30,7 +30,7 @@ jobs:
         with:
           creds: ${{ secrets.SP_CREDS }}
       - name: Run action for ARM Template
-        uses: TheCloudTheory/azure-cost-estimator-action@0.0.15-preview
+        uses: TheCloudTheory/azure-cost-estimator-action@1.0.0
         with:
           template-file: 'ace-tests/templates/acr.json'
           subscription-id: '<subscription-id>'
@@ -54,7 +54,7 @@ jobs:
         with:
           creds: ${{ secrets.SP_CREDS }}
       - name: Run action for Bicep
-        uses: TheCloudTheory/azure-cost-estimator-action@0.0.15-preview
+        uses: TheCloudTheory/azure-cost-estimator-action@1.0.0
         with:
           template-file: 'ace-tests/templates/bicep.json'
           subscription-id: '<subscription-id>'
@@ -78,7 +78,7 @@ jobs:
         with:
           creds: ${{ secrets.SP_CREDS }}
       - name: Run action for inline parameters
-        uses: TheCloudTheory/azure-cost-estimator-action@0.0.15-preview
+        uses: TheCloudTheory/azure-cost-estimator-action@1.0.0
         with:
           template-file: 'ace-tests/templates/acr.json'
           subscription-id: '<subscription-id>'
